@@ -16,7 +16,7 @@ class Detector:
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print(f"[INFO] Using Device: {self.device}")
         
-        path_to_check = r"c:\Users\aemer\Kuliah\Pengolahaan Citra Digital\UAS\trained-nano-120epoch-dataset-II.pt"
+        path_to_check = r"../../trained-nano-120epoch-dataset-II.pt"
         if os.path.exists(path_to_check):
              print(f"[INFO] Loading Custom YOLO: {path_to_check}")
              self.yolo_model = YOLO(path_to_check)
